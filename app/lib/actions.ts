@@ -42,7 +42,7 @@ export async function createInvoice(prevState: State, formData: FormData) {
     };
   }
 
-  const { amount, customerId } = validatedFields.data;
+  const { amount, customerId, status } = validatedFields.data;
 
   const amountInCents = amount * 100;
   const date = new Date().toISOString().split('T')[0];
